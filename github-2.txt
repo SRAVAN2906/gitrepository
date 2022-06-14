@@ -1,0 +1,135 @@
+When we make changes to files we need to stage them to commit
+
+|- To add files to staging area we will use add command
+
+|-To commit files to local repo we will use commit command
+
+Not:we should provide reason for commit as a message
+
+|-To publish local commits to central repository we will use push command.
+
+|-Whenever we commit,git will generate commit-id
+
+|-commit-id contains 40 alphanumerics characters.
+
+|-From 40 aphanumeric character it will display first 7 characters to us.
+
+|-To check commit history we will use git log command
+
+syntax: git log
+
+|-In commit logs it will display below details
+a. commit-id
+b.author
+c.timestamp
+d.commit msg
+
+
+|-To take existing project from repository to local system we will use git clone command
+
+Syntax:-
+=======
+git clone <repo-url>
+
+
+|-Before making any changes to files in local,it is highly recommended to take lastest changes from repository. to take lastest changes from repository we will use git pull command
+
+syntax:-
+git pull
+
+
+
+
+How to PUSH project into github 
+=======================================
+|-Create Repository in Git Hub account(Repo URL will be generated)
+
+|-Create Spring boot application in STS IDE
+
+|-Go to workspace folder where project is created
+
+|-Inside project folder open GIT Bash
+
+|-Execute git init command
+
+|-Execute git add --a command
+
+|-Execute commit command(git commit -m '<msg>')
+
+|-Execute remote add command(git remote add origin <repo-url>
+
+|-Eexcute push command(git push -u origin master
+
+
+git stash
+==========
+
+|-It is used to record current changes and make working tree clean
+
+
+
+
+Workflow
+Checkout a remote branch ‘develop’ and keep it linked to the origin
+git checkout -t origin/develop
+It should report: “Branch develop set up to track remote branch develop from origin.”
+
+List all branches (both local and remote)
+git branch -a
+List local branches and their corresponding upstream remote branches
+git branch -vv
+Revert local changes to a file (prior to commit)
+git checkout file
+Revert all local changes to the current subtree (prior to commit)
+git checkout .
+Cute hack to revert all local changes (prior to commit)
+git stash git stash drop
+Undo a commit
+git reset --soft HEAD^
+Undo multiple commits
+git reset --soft HEAD@{2}
+Where 2 is the number of commits to undo.
+
+Update to latest HEAD, preserving local changes and local commits on top
+git stash
+git pull --rebase
+git stash pop
+Push changes on master to origin
+git push origin master
+Delete untracked files and directories
+git clean -df
+Interactively stage patches from changed file(s)
+git add -p &lt;path&gt;
+Roll back the last commit’s changes to a particular file
+git checkout HEAD@{1} -- file
+Branches
+Branch master to a new local branch “new_branch”
+git checkout -b new_branch master
+Push local branch to remote
+git push -u origin new_branch
+Make the current local branch start tracking a corresponding remote branch
+git branch --set-upstream-to origin/new_branch
+This is not necessary if you used git push -u as suggested above.
+
+List the local branches that have already been merged to this one
+git branch --merged
+Diff a file between two branches
+git diff branch1 branch2 -- file
+Delete a branch both locally and remotely
+git branch -rd origin/branch_to_kill
+git branch -d branch_to_kill
+git push origin :branch_to_kill
+Move a commit from bad_branch to good_branch
+# First cherry-pick the commit onto the correct branch:
+git checkout good_branch
+git cherry-pick deadbeef
+
+# Then remove the commit from the bad branch:
+git checkout bad_branch
+git rebase -i
+# Change the undesirable commit to "noop"
+For more on branching, see Git topic branches.
+
+Rename the current branch
+Copy
+git branch -m <new branch name>

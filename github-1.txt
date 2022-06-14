@@ -1,0 +1,279 @@
+What Is Git?
+================
+|-Git is a version control system for tracking changes in computer files. It helps in coordinating work amongst several people in a project and tracks progress over time. Unlike the centralized version control system, Git branches can be easily merged. A new branch is created every time a developer wants to start working on something. This ensures that the master branch always has a production-quality code.
+
+|-Git is a distributed version control system, so here, every developer gets their local repository with full commit history. The commit history makes Git fast, as now a network connection is not needed to create commits or perform diffs between commits.
+
+
+What Is GitHub?
+=================
+|-GitHub is a Git repository hosting service that provides a web-based graphical interface (GUI). It helps every team member work together on a project from anywhere, making it easy to collaborate. 
+
+|-GitHub is one place where project managers and developers coordinate, track, and update their work, so projects stay transparent and on schedule. The packages can be published privately, within the team, or publicly for the open-source community. Downloading packages from GitHub enables them to be used and reused. GitHub helps all team members stay on the same page and stay organized. Moderation tools, like issue and pull request locking, helps the team focus on the code.
+
+
+
+
+
+
+
+
+
+
+
+What is branch in GIT HUB?
+
+When we create GIT Repository by default it will provide master branch.
+
+|-branches are nothing but code bases.
+|-We can create several branches in GIT repository.
+
+|-Generall in git repository we will create branches like below
+-master(default)
+-develop
+-feature
+-QA
+-UAT
+-release
+
+
+How to copy git repsoitory
+============================
+
+Login into Git Repository
+Create develop branch from master branch
+clone devlop branch code
+
+Note:-
+
+If we execute git clone <repo-url> it clones master code by default.
+
+|-If we want to clone specific branch code then we should execute below command
+
+git clone -b <branch-name> <repo-url>
+
+e.g:-
+git clone -b develop repo-url
+
+
+In Which branch working use following command
+
+git branch
+
+
+
+GIT Bash Command
+====================
+init
+clone
+add
+status
+commit
+push
+pull
+checkout
+reset
+log
+
+
+
+git help
+|-It provides frequently used several git commands
+
+git help <cmd-name>
+|-It opens documentation of that particular command
+
+git init
+|-It is used to create empty repository or re-initialize existing repo
+
+git status
+|-this command will display status of current repository
+
+
+Staged Files
+==============
+|-Files which are added and they are ready to commit.
+these file name will be displayed in green color
+
+
+UnStaged Files
+==============
+|-modified files will be displayed here, we need to stage these files to commit
+these file name will be displayed in red color
+
+Un-Tracked Files
+==============
+|-Newly created files,we need to stage then to commit
+
+|-these file name will be displayed in red color
+
+
+git add:this command is used to add file to staging area
+
+Syntax:-
+
+git add <file-name>
+
+add all files at a time
+
+git add --a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+git config
+============
+
+git config --global user.name "your name"
+
+git config --global user.email "email address"
+
+|-This commands sets the author name and email address respectively to be used with your commits.
+
+
+
+git init
+==============
+
+git init
+
+|-this command is used to start a new repository
+
+
+git clone
+===============
+
+git clone [url]
+
+|-this command is used to obtain a repository from and existing URL.
+
+
+git add
+=============
+git add [filename]
+
+|-This commands adds a file to the stagging area.
+
+git add --a
+
+|-This commands adds a all file to the stagging area.
+
+git commit
+==============
+
+git commit -m "type in the commit msg"
+
+|-This commands records or snapshots the file permanently in the version history.
+
+
+
+git rm
+=========
+
+git rm [fileName]
+
+|-This commands deletes the file from your working directory and stages the deletion
+
+
+git remote
+===================
+
+git remote add url
+
+|-this command is used to connect your local repository to the remote server.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
